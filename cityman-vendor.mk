@@ -135,12 +135,17 @@ PRODUCT_COPY_FILES += \
     vendor/msft/cityman/proprietary/vendor/firmware/adsp.b10:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b10 \
     vendor/msft/cityman/proprietary/vendor/firmware/adsp.b11:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b11 \
     vendor/msft/cityman/proprietary/vendor/firmware/adsp.b12:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b12 \
-    vendor/msft/cityman/proprietary/vendor/firmware/adsp.b13:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b13 \
     vendor/msft/cityman/proprietary/vendor/firmware/adsp.b14:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b14 \
-    vendor/msft/cityman/proprietary/vendor/firmware/adsp.b15:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b15 \
+    vendor/msft/cityman/proprietary/vendor/firmware/adsp.b16:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b16 \
+    vendor/msft/cityman/proprietary/vendor/firmware/adsp.b17:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b17 \
     vendor/msft/cityman/proprietary/vendor/firmware/adsp.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.mdt \
     vendor/msft/cityman/proprietary/vendor/firmware/bdwlan30.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan30.bin \
     vendor/msft/cityman/proprietary/vendor/firmware/btfw32.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/btfw32.tlv \
+    vendor/msft/cityman/proprietary/vendor/firmware/nvm_tlv_3.0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/nvm_tlv_3.0.bin \
+    vendor/msft/cityman/proprietary/vendor/firmware/nvm_tlv_3.2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/nvm_tlv_3.2.bin \
+    vendor/msft/cityman/proprietary/vendor/firmware/rampatch_tlv_3.0.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/rampatch_tlv_3.0.tlv \
+    vendor/msft/cityman/proprietary/vendor/firmware/rampatch_tlv_3.2.tlv:$(TARGET_COPY_OUT_VENDOR)/firmware/rampatch_tlv_3.2.tlv \
+    vendor/msft/cityman/proprietary/vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini \
     vendor/msft/cityman/proprietary/vendor/firmware/btnv32.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/btnv32.bin \
     vendor/msft/cityman/proprietary/vendor/firmware/cpe.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe.b02 \
     vendor/msft/cityman/proprietary/vendor/firmware/cpe.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/cpe.b04 \
