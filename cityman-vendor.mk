@@ -531,3 +531,56 @@ PRODUCT_PACKAGES += \
     libqmi_client_helper \
     libmdmdetect \
     ims
+
+# Cityman camera daemon stack: angler (Nexus 6P) 8.1.0 OPM7.181205.001,
+# VFE 4.6. See CAMERA-CITYMAN.md.
+PRODUCT_COPY_FILES += \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_liteon_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_liteon_common.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_liteon_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_liteon_cpp_liveshot.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_liteon_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_liteon_cpp_preview.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_liteon_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_liteon_cpp_snapshot.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_liteon_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_liteon_cpp_video.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_liteon_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_liteon_default_video.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_liteon_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_liteon_liveshot.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_liteon_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_liteon_postproc.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_liteon_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_liteon_preview.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_liteon_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_liteon_snapshot.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_liteon_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_liteon_video_binning.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_sunny_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_sunny_common.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_sunny_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_sunny_cpp_liveshot.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_sunny_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_sunny_cpp_preview.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_sunny_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_sunny_cpp_snapshot.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_sunny_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_sunny_cpp_video.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_sunny_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_sunny_default_video.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_sunny_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_sunny_liveshot.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_sunny_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_sunny_postproc.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_sunny_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_sunny_preview.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_sunny_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_sunny_snapshot.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libchromatix_imx179_sunny_video_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_imx179_sunny_video_binning.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_dw9761b_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_dw9761b_eeprom.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_imx179_liteon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imx179_liteon.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_imx179_sunny.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imx179_sunny.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_imx230.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imx230.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_bf_scale_stats46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_bf_scale_stats46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_bg_stats46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_bg_stats46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_clf46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_clf46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_color_correct46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_color_correct46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_color_xform_encoder46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_color_xform_encoder46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_color_xform_video46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_color_xform_video46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_color_xform_viewfinder46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_color_xform_viewfinder46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_cs_stats46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_cs_stats46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_fovcrop_encoder46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_fovcrop_encoder46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_fovcrop_video46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_fovcrop_video46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_fovcrop_viewfinder46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_fovcrop_viewfinder46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_gic46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_gic46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_gtm46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_gtm46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_hdr46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_hdr46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_hdr_be_stats46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_hdr_be_stats46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_ihist_stats46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_ihist_stats46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_pedestal_correct46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_pedestal_correct46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_rs_stats46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_rs_stats46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_scaler_encoder46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_scaler_encoder46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_scaler_video46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_scaler_video46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_scaler_viewfinder46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_scaler_viewfinder46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_wb46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_wb46.so \
+    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_sony_imx179_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sony_imx179_eeprom.so
