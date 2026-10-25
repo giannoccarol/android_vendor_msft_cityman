@@ -92,7 +92,6 @@ PRODUCT_PACKAGES += \
     HiddenMenu \
     RCSBootstraputil \
     RcsImsBootstraputil \
-    Tycho \
     CNEService \
     DCMO \
     DMConfigUpdate \
@@ -530,12 +529,9 @@ PRODUCT_PACKAGES += \
     libqmi_common_so \
     qcrilhook \
     libqmi \
-    libqmi_client_qmux \
     libqmiservices \
     libqmi_cci \
-    libqmi_client_helper \
-    libmdmdetect \
-    ims
+    libmdmdetect
 
 # Cityman camera daemon stack: angler (Nexus 6P) 8.1.0 OPM7.181205.001,
 # VFE 4.6. See CAMERA-CITYMAN.md.
