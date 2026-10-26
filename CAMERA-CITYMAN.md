@@ -38,8 +38,6 @@ tree, including the explicit private input and first-probe clock requirements.
 The source module is already enumerated on the owner's A13 ROM, but CSI header
 ECC errors still prevent preview. The 24 MHz candidate needs its own phone test.
 
-`liboemcamera.so` is the angler file with one change: its `libsensor.so`
-dependency is renamed to `libsensor_vendor.so` (patchelf 0.17.2,
-`--replace-needed`), because the Android 13 libsensor no longer has
-`SensorManager::createEventQueue(String8, int)`. The original SHA-256 is
-`77983655cd0beb733363804378c68a70c84d4e290cddadbbed044f80aca2776e`.
+`liboemcamera.so` is the unmodified angler file; the device tree provides
+the old `SensorManager::createEventQueue(String8, int)` through
+`libsensor_camera_shim` (`TARGET_LD_SHIM_LIBS`).
