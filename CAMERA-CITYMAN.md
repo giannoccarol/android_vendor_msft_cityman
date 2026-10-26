@@ -27,3 +27,9 @@ inherited, which has no VFE 4.6 ISP modules.
   libraries were added; see the device's `camera-sensors/imx230/ABI.md`.
 
 Per-file hashes are in `CAMERA-CITYMAN.sha256`.
+
+`liboemcamera.so` is the angler file with one change: its `libsensor.so`
+dependency is renamed to `libsensor_vendor.so` (patchelf 0.17.2,
+`--replace-needed`), because the Android 13 libsensor no longer has
+`SensorManager::createEventQueue(String8, int)`. The original SHA-256 is
+`77983655cd0beb733363804378c68a70c84d4e290cddadbbed044f80aca2776e`.
