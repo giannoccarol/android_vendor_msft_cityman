@@ -44,6 +44,13 @@ PRODUCT_COPY_FILES += \
     vendor/msft/cityman/proprietary/bin/qmuxd:$(TARGET_COPY_OUT_VENDOR)/bin/qmuxd \
     vendor/msft/cityman/proprietary/bin/rmt_storage:$(TARGET_COPY_OUT_VENDOR)/bin/rmt_storage \
     vendor/msft/cityman/proprietary/bin/subsystem_ramdump:$(TARGET_COPY_OUT_VENDOR)/bin/subsystem_ramdump \
+    vendor/msft/cityman/proprietary/vendor/etc/acdbdata/cityman/Cityman_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/cityman/Cityman_Bluetooth_cal.acdb \
+    vendor/msft/cityman/proprietary/vendor/etc/acdbdata/cityman/Cityman_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/cityman/Cityman_General_cal.acdb \
+    vendor/msft/cityman/proprietary/vendor/etc/acdbdata/cityman/Cityman_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/cityman/Cityman_Global_cal.acdb \
+    vendor/msft/cityman/proprietary/vendor/etc/acdbdata/cityman/Cityman_Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/cityman/Cityman_Handset_cal.acdb \
+    vendor/msft/cityman/proprietary/vendor/etc/acdbdata/cityman/Cityman_Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/cityman/Cityman_Hdmi_cal.acdb \
+    vendor/msft/cityman/proprietary/vendor/etc/acdbdata/cityman/Cityman_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/cityman/Cityman_Headset_cal.acdb \
+    vendor/msft/cityman/proprietary/vendor/etc/acdbdata/cityman/Cityman_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/cityman/Cityman_Speaker_cal.acdb \
     vendor/msft/cityman/proprietary/etc/acdbdata/Bluetooth_cal.acdb:system/etc/acdbdata/Bluetooth_cal.acdb \
     vendor/msft/cityman/proprietary/etc/acdbdata/General_cal.acdb:system/etc/acdbdata/General_cal.acdb \
     vendor/msft/cityman/proprietary/etc/acdbdata/Global_cal.acdb:system/etc/acdbdata/Global_cal.acdb \

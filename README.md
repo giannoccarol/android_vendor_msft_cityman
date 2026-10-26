@@ -25,4 +25,8 @@ phone's `persist` and modem partitions.
   the Bluetooth firmware and the Cityman `qcadsp8994.mbn`.
 - **Google / Qualcomm**: the angler and bullhead 8.1 blobs (camera daemon
   stack and other vendor libraries).
+- **shadowofleaf96** (`shadowofleaf96/android_vendor_msft_cityman`,
+  `9e57307`): the Cityman ACDB calibration files
+  (`etc/acdbdata/cityman/Cityman_*_cal.acdb`), which match the Cityman ADSP
+  firmware; the bullhead ACDB makes the ADSP refuse the audio streams.
 - **LineageOS** and **TheMuppets**: reference vendor trees.
