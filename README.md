@@ -29,4 +29,13 @@ phone's `persist` and modem partitions.
   `9e57307`): the Cityman ACDB calibration files
   (`etc/acdbdata/cityman/Cityman_*_cal.acdb`), which match the Cityman ADSP
   firmware; the bullhead ACDB makes the ADSP refuse the audio streams.
+- **OnePlus / Qualcomm**, via **davigamer987**
+  (`davigamer987/vendor_oneplus_oneplus2`, branch `lineage-22.2`, `1abfce3`):
+  the MSM8994 `perfd` daemon, `perf-profile1`-`5.conf` and
+  `libqti-perfd-client.so` (32 and 64 bit) from the OnePlus 2 (OxygenOS
+  6.0.1). The LineageOS 20 OnePlus 2 port by **mukul2259** / **_undead**
+  (`mukul2259/experimental_device_oneplus_oneplus2`, `6cdfa90`) uses the same
+  blobs with the QTI power HAL. They replace the open-source
+  `libqti-perfd-client` stub of the device tree, so power HAL hints and
+  thermal-engine profiles reach a real daemon.
 - **LineageOS** and **TheMuppets**: reference vendor trees.
