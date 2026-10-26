@@ -22,11 +22,21 @@ inherited, which has no VFE 4.6 ISP modules.
   with an independently specified interface tested against the actual angler
   consumer, including the Android-built shared object. It is selected only by
   `CITYMAN_CAMERA_SMIA_EXPERIMENTAL=true`. No new sensor binary is stored in
-  this vendor repository. Actual phone streaming and calibration are untested.
+  this vendor repository. Actual image delivery and calibration remain unverified.
   Front Ducati has no validated module. No Motorola, Nubia or HTC camera
   libraries were added; see the device's `camera-sensors/imx230/ABI.md`.
 
 Per-file hashes are in `CAMERA-CITYMAN.sha256`.
+
+The Android 13 device camera branch also has the optional `nubia24` diagnostic
+profile: generated private init/mode register data, 24 MHz MCLK, matching PLL
+and output metadata, and the three CSID entries from the old A11 reference.
+It is built by the source plugin with the existing angler ABI; no Nubia daemon,
+HAL, sensor executable or chromatix is added to this vendor repository.
+The default remains `smia9`. See `camera-sensors/imx230/NUBIA24.md` in the device
+tree, including the explicit private input and first-probe clock requirements.
+The source module is already enumerated on the owner's A13 ROM, but CSI header
+ECC errors still prevent preview. The 24 MHz candidate needs its own phone test.
 
 `liboemcamera.so` is the angler file with one change: its `libsensor.so`
 dependency is renamed to `libsensor_vendor.so` (patchelf 0.17.2,
