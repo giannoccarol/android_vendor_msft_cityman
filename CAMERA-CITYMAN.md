@@ -18,9 +18,12 @@ inherited, which has no VFE 4.6 ISP modules.
   It is removed from both this branch and the product copy list.
 - The kernel branch is `lineage-20-cityman-camera`, created directly from
   `lineage-20-cityman`. Its camera driver is aligned with this angler daemon.
-- A matching Lumia sensor module is still required. This is a development
-  baseline, not a camera fix or a complete SMIA++ integration. Front Ducati
-  has no validated module either. No Motorola, Nubia or HTC camera libraries
-  have been added to replace the missing sensor module.
+- The device camera branch now supplies a new source IMX230 SMIA++ module,
+  with an independently specified interface tested against the actual angler
+  consumer, including the Android-built shared object. It is selected only by
+  `CITYMAN_CAMERA_SMIA_EXPERIMENTAL=true`. No new sensor binary is stored in
+  this vendor repository. Actual phone streaming and calibration are untested.
+  Front Ducati has no validated module. No Motorola, Nubia or HTC camera
+  libraries were added; see the device's `camera-sensors/imx230/ABI.md`.
 
 Per-file hashes are in `CAMERA-CITYMAN.sha256`.
