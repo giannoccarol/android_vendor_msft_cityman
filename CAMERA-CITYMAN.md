@@ -12,13 +12,15 @@ inherited, which has no VFE 4.6 ISP modules.
   48 files bullhead lacks are listed at the end of `cityman-vendor.mk`.
   Bullhead-only camera files are kept; the angler sensor module does not
   load them.
-- `libmmcamera_imx230.so` (SHA-256 `0bea6822…`) is a probe library for
-  the rear Sony IMX230, derived from the bullhead `libmmcamera_imx377.so`
-  by `tools/cityman-camera/make-imx230-lib.py` in the kernel tree. It
-  carries IMX377 register tables: Android lists the camera, but the sensor
-  does not stream yet (SOF freeze).
-- The kernel must be giannoccarol/android_kernel_mmo_msm8994
-  `lineage-18.1-cityman-camera`, whose camera_v2 driver matches this
-  daemon's ioctls.
+- The Android 13 camera branch deliberately omits the old IMX377-derived
+  `libmmcamera_imx230.so` probe library. Its register programs were for another
+  sensor and it could enumerate the IMX230 without delivering real frames.
+  It is removed from both this branch and the product copy list.
+- The kernel branch is `lineage-20-cityman-camera`, created directly from
+  `lineage-20-cityman`. Its camera driver is aligned with this angler daemon.
+- A matching Lumia sensor module is still required. This is a development
+  baseline, not a camera fix or a complete SMIA++ integration. Front Ducati
+  has no validated module either. No Motorola, Nubia or HTC camera libraries
+  have been added to replace the missing sensor module.
 
 Per-file hashes are in `CAMERA-CITYMAN.sha256`.

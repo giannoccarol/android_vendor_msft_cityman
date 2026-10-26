@@ -561,7 +561,6 @@ PRODUCT_COPY_FILES += \
     vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_dw9761b_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_dw9761b_eeprom.so \
     vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_imx179_liteon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imx179_liteon.so \
     vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_imx179_sunny.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imx179_sunny.so \
-    vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_imx230.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imx230.so \
     vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_bf_scale_stats46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_bf_scale_stats46.so \
     vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_bg_stats46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_bg_stats46.so \
     vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_clf46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_clf46.so \
