@@ -96,24 +96,9 @@ PRODUCT_COPY_FILES += \
 #   vendor/msft/cityman/proprietary/lib64/hw/sensors.msm8992.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/hw/sensors.msm8992.so 
 
 PRODUCT_PACKAGES += \
-    HiddenMenu \
-    RCSBootstraputil \
-    RcsImsBootstraputil \
-    CNEService \
-    DCMO \
-    DMConfigUpdate \
-    DiagMon \
-    HotwordEnrollmentOKGoogleWCD9330 \
-    HotwordEnrollmentTGoogleWCD9330 \
-    HotwordEnrollmentXGoogleWCD9330 \
-    LifeTimerService \
-    atfwd \
     qcrilmsgtunnel \
-    cneapiclient \
     com.google.android.camera.experimental2016 \
-    qcrilhook \
-    rcsimssettings \
-    rcsservice
+    qcrilhook
 
 PRODUCT_COPY_FILES += \
     vendor/msft/cityman/proprietary/vendor/bin/mm-qcamera-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-daemon \
@@ -542,7 +527,7 @@ PRODUCT_PACKAGES += \
     libtime_genoff \
     datastatusnotification \
     libqmi_common_so \
-    qcrilhook \
+    qcrilhook
     libqmi \
     libqmiservices \
     libqmi_cci \
