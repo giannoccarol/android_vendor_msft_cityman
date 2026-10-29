@@ -527,7 +527,7 @@ PRODUCT_PACKAGES += \
     libtime_genoff \
     datastatusnotification \
     libqmi_common_so \
-    qcrilhook
+    qcrilhook \
     libqmi \
     libqmiservices \
     libqmi_cci \
