@@ -23,9 +23,6 @@ PRODUCT_COPY_FILES += \
     vendor/msft/cityman/proprietary/bin/btnvtool:$(TARGET_COPY_OUT_VENDOR)/bin/btnvtool \
     vendor/msft/cityman/proprietary/bin/cnd:$(TARGET_COPY_OUT_VENDOR)/bin/cnd \
     vendor/msft/cityman/proprietary/bin/cnss-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/cnss-daemon \
-    vendor/msft/cityman/proprietary/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
-    vendor/msft/cityman/proprietary/bin/imsdatadaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdatadaemon \
-    vendor/msft/cityman/proprietary/bin/imsqmidaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsqmidaemon \
     vendor/msft/cityman/proprietary/bin/irsc_util:$(TARGET_COPY_OUT_VENDOR)/bin/irsc_util \
     vendor/msft/cityman/proprietary/bin/loc_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/loc_launcher \
     vendor/msft/cityman/proprietary/bin/location-mq:$(TARGET_COPY_OUT_VENDOR)/bin/location-mq \
@@ -82,10 +79,10 @@ PRODUCT_COPY_FILES += \
     vendor/msft/cityman/proprietary/etc/sysconfig/whitelist_com.android.omadm.service.xml:system/etc/sysconfig/whitelist_com.android.omadm.service.xml \
     vendor/msft/cityman/proprietary/lib/libdmengine.so:system/lib/libdmengine.so \
     vendor/msft/cityman/proprietary/lib/libdmjavaplugin.so:system/lib/libdmjavaplugin.so \
-    vendor/msft/cityman/proprietary/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
-    vendor/msft/cityman/proprietary/lib/libloc_ds_api.so:system/lib/libloc_ds_api.so \
-    vendor/msft/cityman/proprietary/lib64/libloc_api_v02.so:system/lib64/libloc_api_v02.so \
-    vendor/msft/cityman/proprietary/lib64/libloc_ds_api.so:system/lib64/libloc_ds_api.so
+    vendor/msft/cityman/proprietary/lib/libloc_api_v02.so:$(TARGET_COPY_OUT_VENDOR)/lib/libloc_api_v02.so \
+    vendor/msft/cityman/proprietary/lib/libloc_ds_api.so:$(TARGET_COPY_OUT_VENDOR)/lib/libloc_ds_api.so \
+    vendor/msft/cityman/proprietary/lib64/libloc_api_v02.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_api_v02.so \
+    vendor/msft/cityman/proprietary/lib64/libloc_ds_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_ds_api.so
 #   vendor/msft/cityman/proprietary/vendor/bin/sensors.qcom:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qcom \
 #   vendor/msft/cityman/proprietary/vendor/lib/libsensor1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor1.so \
 #   vendor/msft/cityman/proprietary/vendor/lib/libsensor_lge_cal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_lge_cal.so \
@@ -195,20 +192,6 @@ PRODUCT_COPY_FILES += \
     vendor/msft/cityman/proprietary/vendor/lib/hw/tof.vl6180.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/tof.vl6180.so \
     vendor/msft/cityman/proprietary/vendor/lib/hw/vulkan.msm8992.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.msm8992.so \
     vendor/msft/cityman/proprietary/vendor/lib/libslimclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libslimclient.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-dplmedia.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-dplmedia.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-ims-rcscmjni.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-ims-rcscmjni.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-imsSDP.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsSDP.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-imsdpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsdpl.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-imsqimf.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsqimf.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-imsrcs.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsrcs.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-imsrcscm.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsrcscm.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-imsrcscmclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsrcscmclient.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-imsrcscmservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsrcscmservice.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-imss.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imss.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-imsvt.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsvt.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-imsxml.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-imsxml.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-rcsimssjni.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-rcsimssjni.so \
-    vendor/msft/cityman/proprietary/vendor/lib/lib-rcsjni.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-rcsjni.so \
     vendor/msft/cityman/proprietary/vendor/lib/lib-rtpcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-rtpcommon.so \
     vendor/msft/cityman/proprietary/vendor/lib/lib-rtpcore.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-rtpcore.so \
     vendor/msft/cityman/proprietary/vendor/lib/lib-rtpdaemoninterface.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib-rtpdaemoninterface.so \
@@ -278,8 +261,6 @@ PRODUCT_COPY_FILES += \
     vendor/msft/cityman/proprietary/vendor/lib/libgoog_rownr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgoog_rownr.so \
     vendor/msft/cityman/proprietary/vendor/lib/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgsl.so \
     vendor/msft/cityman/proprietary/vendor/lib/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libidl.so \
-    vendor/msft/cityman/proprietary/vendor/lib/libimscamera_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib/libimscamera_jni.so \
-    vendor/msft/cityman/proprietary/vendor/lib/libimsmedia_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib/libimsmedia_jni.so \
     vendor/msft/cityman/proprietary/vendor/lib/libjpegdhw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpegdhw.so \
     vendor/msft/cityman/proprietary/vendor/lib/libjpegdmahw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpegdmahw.so \
     vendor/msft/cityman/proprietary/vendor/lib/libjpegehw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpegehw.so \
@@ -409,20 +390,6 @@ PRODUCT_COPY_FILES += \
     vendor/msft/cityman/proprietary/vendor/lib64/hw/flp.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/flp.default.so \
     vendor/msft/cityman/proprietary/vendor/lib64/hw/sound_trigger.primary.msm8992.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.msm8992.so \
     vendor/msft/cityman/proprietary/vendor/lib64/hw/vulkan.msm8992.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.msm8992.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-dplmedia.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-dplmedia.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-ims-rcscmjni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-ims-rcscmjni.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-imsSDP.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsSDP.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-imsdpl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsdpl.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-imsqimf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsqimf.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-imsrcs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsrcs.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-imsrcscm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsrcscm.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-imsrcscmclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsrcscmclient.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-imsrcscmservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsrcscmservice.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-imss.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imss.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-imsvt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsvt.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-imsxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsxml.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-rcsimssjni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rcsimssjni.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/lib-rcsjni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rcsjni.so \
     vendor/msft/cityman/proprietary/vendor/lib64/lib-rtpcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpcommon.so \
     vendor/msft/cityman/proprietary/vendor/lib64/lib-rtpcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpcore.so \
     vendor/msft/cityman/proprietary/vendor/lib64/lib-rtpdaemoninterface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpdaemoninterface.so \
@@ -457,8 +424,6 @@ PRODUCT_COPY_FILES += \
     vendor/msft/cityman/proprietary/vendor/lib64/libgeofence.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgeofence.so \
     vendor/msft/cityman/proprietary/vendor/lib64/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgsl.so \
     vendor/msft/cityman/proprietary/vendor/lib64/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libidl.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/libimscamera_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimscamera_jni.so \
-    vendor/msft/cityman/proprietary/vendor/lib64/libimsmedia_jni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimsmedia_jni.so \
     vendor/msft/cityman/proprietary/vendor/lib64/libizat_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_core.so \
     vendor/msft/cityman/proprietary/vendor/lib64/libkmcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkmcrypto.so \
     vendor/msft/cityman/proprietary/vendor/lib64/liblbs_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblbs_core.so \
