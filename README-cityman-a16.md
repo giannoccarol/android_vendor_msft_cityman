@@ -12,8 +12,8 @@ from `device.mk`.
 | Blob | Change |
 |---|---|
 | `vendor/lib64/libril-qc-qmi-1.so` | `libaudioclient.so` → `libaudioclient_shim_vendor.so` (AudioSystem stubs, device `libshims/`) |
-| `vendor/lib/liboemcamera.so` | drop `libgui.so`; `libsensor.so` → `libsensor_vendor.so`; `libandroid.so` → `libsensorndkbridge.so` |
-| `vendor/lib/libmmcamera2_imglib_modules.so` | drop `libgui.so`; `libsensor.so` → `libsensor_vendor.so` |
+| `vendor/lib/liboemcamera.so` | drop `libgui.so`; `libsensor.so` → `libsensor_camera_stub.so` (device `libshims/`: a SensorManager with no sensors; the LineageOS `libsensor_vendor` lacks `SensorEventQueue::getFd()` and hung the daemon on Android 13); `libandroid.so` → `libsensorndkbridge.so` |
+| `vendor/lib/libmmcamera2_imglib_modules.so` | drop `libgui.so`; `libsensor.so` → `libsensor_camera_stub.so` |
 | `vendor/lib/libmmcamera2_stats_modules.so` | `libandroid.so` → `libsensorndkbridge.so` |
 | `vendor/lib/libmmcamera_faceproc.so`, `libgoog_eis_armeabi-v7a.so`, `libgoog_rownr.so` | `libstdc++.so` → `libstdc++_vendor.so` |
 | `vendor/lib{,64}/mediadrm/libwvdrmengine.so` | `libprotobuf-cpp-lite.so` → `libprotobuf-cpp-lite-3.9.1-vendorcompat.so`; add `libcrypto_shim.so` |
