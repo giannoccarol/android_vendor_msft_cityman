@@ -18,6 +18,7 @@ from `device.mk`.
 | `vendor/lib/libmmcamera_faceproc.so`, `libgoog_eis_armeabi-v7a.so`, `libgoog_rownr.so` | `libstdc++.so` → `libstdc++_vendor.so` |
 | `vendor/lib{,64}/mediadrm/libwvdrmengine.so` | `libprotobuf-cpp-lite.so` → `libprotobuf-cpp-lite-3.9.1-vendorcompat.so`; add `libcrypto_shim.so` |
 | `bin/ATFWD-daemon`, `bin/cnd`, `vendor/lib{,64}/libcne.so` | add `libcutils_shim.so` (was `TARGET_LD_SHIM_LIBS`) |
+| `vendor/lib{,64}/hw/android.hardware.nfc@1.0-impl.so` | drop `libhidltransport.so` (merged into `libhidlbase.so` since Android 11; the NFC HAL failed to load and the NFC service crashed in a loop) |
 | `bin/netmgrd`, `bin/qmuxd` | add `libcityman_ds_target.so` (was an `LD_PRELOAD` in `init.cityman.rc`, inherited by the system `sh` they spawn, which cannot load vendor libraries) |
 | `proprietary/bin/pm-service` | add `libutils-v33.so` (Android 16 libutils aborts on "RefBase used with stack pointer argument"; without pm-service the modem is never powered) |
 
