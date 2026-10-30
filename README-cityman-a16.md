@@ -18,6 +18,7 @@ from `device.mk`.
 | `vendor/lib/libmmcamera_faceproc.so`, `libgoog_eis_armeabi-v7a.so`, `libgoog_rownr.so` | `libstdc++.so` → `libstdc++_vendor.so` |
 | `vendor/lib{,64}/mediadrm/libwvdrmengine.so` | `libprotobuf-cpp-lite.so` → `libprotobuf-cpp-lite-3.9.1-vendorcompat.so`; add `libcrypto_shim.so` |
 | `bin/ATFWD-daemon`, `bin/cnd`, `vendor/lib{,64}/libcne.so` | add `libcutils_shim.so` (was `TARGET_LD_SHIM_LIBS`) |
+| `proprietary/bin/pm-service` | add `libutils-v33.so` (Android 16 libutils aborts on "RefBase used with stack pointer argument"; without pm-service the modem is never powered) |
 
 Other changes:
 - `libloc_api_v02.so` and `libloc_ds_api.so` move from `system/` to vendor: the
