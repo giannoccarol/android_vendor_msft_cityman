@@ -13,6 +13,11 @@ Listed in `cityman-vendor.mk`; the camera stack is described in
 - ADSP: `adsp.mdt`, `adsp.b00`-`b04`, `b06`, `b08`-`b12`, `b14`, `b16`, `b17`,
   split from the Cityman `qcadsp8994.mbn` (see
   `Documentation/arm64/cityman-adsp.txt` in the kernel).
+- Venus (video codecs): `venus.mdt`, `venus.b00`-`b04` split from the Cityman
+  `qcvss8994.mbn`, and `venus.mbn`, the unsplit image (see
+  `Documentation/arm64/cityman-venus.txt` in the kernel). The angler/bullhead
+  Venus image they replace fails authentication on this phone, which left
+  every hardware video codec unavailable.
 
 No per-device data is shipped: MAC addresses and the modem EFS stay in the
 phone's `persist` and modem partitions.
@@ -41,7 +46,7 @@ the front VS6955 module from the device tree (`camera-sensors/vs6955`).
 - **Android4Lumia950** (djokcho, EpicLPer, j0sh1x and the community): the
   talkman vendor tree this one is based on (`lineage-18.1-julian`) and
   `Android4Lumia950/firmware-microsoft-cityman`, the source of `bdwlan30.bin`,
-  the Bluetooth firmware and the Cityman `qcadsp8994.mbn`.
+  the Bluetooth firmware, the Cityman `qcadsp8994.mbn` and `qcvss8994.mbn`.
 - **Google / Qualcomm**: the angler and bullhead 8.1 blobs (camera daemon
   stack and other vendor libraries).
 - **shadowofleaf96** (`shadowofleaf96/android_vendor_msft_cityman`,
