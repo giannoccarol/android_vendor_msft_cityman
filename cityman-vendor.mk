@@ -120,6 +120,7 @@ PRODUCT_COPY_FILES += \
     vendor/msft/cityman/proprietary/vendor/firmware/a420_pfp.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a420_pfp.fw \
     vendor/msft/cityman/proprietary/vendor/firmware/a420_pm4.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a420_pm4.fw \
     vendor/msft/cityman/proprietary/vendor/firmware/activity.napp:$(TARGET_COPY_OUT_VENDOR)/firmware/activity.napp \
+    vendor/msft/cityman/proprietary/vendor/firmware/mba.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/mba.b00 \
     vendor/msft/cityman/proprietary/vendor/firmware/adsp.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b00 \
     vendor/msft/cityman/proprietary/vendor/firmware/adsp.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b01 \
     vendor/msft/cityman/proprietary/vendor/firmware/adsp.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b02 \

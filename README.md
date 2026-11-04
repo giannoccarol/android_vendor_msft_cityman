@@ -18,6 +18,15 @@ Listed in `cityman-vendor.mk`; the camera stack is described in
   `Documentation/arm64/cityman-venus.txt` in the kernel). The angler/bullhead
   Venus image they replace fails authentication on this phone, which left
   every hardware video codec unavailable.
+- Modem MBA: `mba.b00`, the 367,824-byte payload (offset `0x1000`) of the
+  Cityman `qcdsp1v28994.mbn` (build AB6A9EB9, sha256 of the `.mbn`
+  `6b75a202c7e05f042a50bfb98e5abae563e5129934146489d2d29d84a2cee60a`).
+  The modem partition written by the installer holds another MBA (build
+  AC1B8953, md5 `07d53b0364c8ccb58c49a4522daa5ebe`) that the modem boot ROM
+  rejects (`RMB_PBL_STATUS ef0b000b`, "MBA boot failed"), so the modem never
+  started and there was no mobile network. ueventd searches `/vendor/firmware`
+  before `/firmware/image`, so this one is used without rewriting the modem
+  partition; the rest of the modem image still comes from it.
 
 No per-device data is shipped: MAC addresses and the modem EFS stay in the
 phone's `persist` and modem partitions.
@@ -46,7 +55,8 @@ the front VS6955 module from the device tree (`camera-sensors/vs6955`).
 - **Android4Lumia950** (djokcho, EpicLPer, j0sh1x and the community): the
   talkman vendor tree this one is based on (`lineage-18.1-julian`) and
   `Android4Lumia950/firmware-microsoft-cityman`, the source of `bdwlan30.bin`,
-  the Bluetooth firmware, the Cityman `qcadsp8994.mbn` and `qcvss8994.mbn`.
+  the Bluetooth firmware, the Cityman `qcadsp8994.mbn`, `qcvss8994.mbn` and
+  `qcdsp1v28994.mbn` (MBA, commit `f489e27`).
 - **Google / Qualcomm**: the angler and bullhead 8.1 blobs (camera daemon
   stack and other vendor libraries).
 - **shadowofleaf96** (`shadowofleaf96/android_vendor_msft_cityman`,
