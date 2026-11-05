@@ -26,7 +26,27 @@ Listed in `cityman-vendor.mk`; the camera stack is described in
   rejects (`RMB_PBL_STATUS ef0b000b`, "MBA boot failed"), so the modem never
   started and there was no mobile network. ueventd searches `/vendor/firmware`
   before `/firmware/image`, so this one is used without rewriting the modem
-  partition; the rest of the modem image still comes from it.
+  partition.
+
+## Modem image shipped in /system/etc/firmware
+
+The installer's `modem.img` is the Lumia 950 (talkman, MSM8992) modem: its
+MBA and its `modem.mdt` carry `HW_ID 009690E1 0045 0000` (Nokia CA
+`0000052A`), while the 950 XL boot ROM only accepts MSM8994 images
+(`HW_ID 009400E1 0045 0000`, CA `00000526`, like the Cityman ADSP and Venus).
+Both are the same modem build, `MPSS.BO.2.5.c4.3-00024-M8994FAAAANAZM-1`
+(2016-06-02); only the signature differs. On some phones the Cityman MBA
+rejected the modem headers of the partition (`MBA returned error -3 for
+headers`).
+
+So the ROM ships the whole Cityman modem: `modem.mdt` and `modem.b00`-`b22`
+split from the Windows `qcdsp28994.mbn` (sha256
+`8a341eb2d92d9ee6c2430d7d6316d54866bc74535b46341d6e9b355711db4ac9`;
+`modem.mdt` = `b00` + `b01`, one `bNN` per program header with data; all 17
+segments match the signed hash table), with the same `mba.b00`. They are in
+`/system/etc/firmware` because the vendor partition has no room for 46 MB, and
+ueventd searches `/etc/firmware` first. Only `modem_pr/mcfg` (carrier
+configurations) still comes from the modem partition.
 
 No per-device data is shipped: MAC addresses and the modem EFS stay in the
 phone's `persist` and modem partitions.
@@ -56,7 +76,7 @@ the front VS6955 module from the device tree (`camera-sensors/vs6955`).
   talkman vendor tree this one is based on (`lineage-18.1-julian`) and
   `Android4Lumia950/firmware-microsoft-cityman`, the source of `bdwlan30.bin`,
   the Bluetooth firmware, the Cityman `qcadsp8994.mbn`, `qcvss8994.mbn` and
-  `qcdsp1v28994.mbn` (MBA, commit `f489e27`).
+  `qcdsp1v28994.mbn` (MBA) and `qcdsp28994.mbn` (modem image, commit `f489e27`).
 - **Google / Qualcomm**: the angler and bullhead 8.1 blobs (camera daemon
   stack and other vendor libraries).
 - **shadowofleaf96** (`shadowofleaf96/android_vendor_msft_cityman`,

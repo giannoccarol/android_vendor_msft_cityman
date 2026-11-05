@@ -547,3 +547,28 @@ PRODUCT_COPY_FILES += \
     vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_scaler_viewfinder46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_scaler_viewfinder46.so \
     vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_isp_wb46.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_wb46.so \
     vendor/msft/cityman/proprietary/vendor/lib/libmmcamera_sony_imx179_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sony_imx179_eeprom.so
+
+# Cityman modem: the Windows qcdsp28994.mbn split into modem.mdt + modem.bNN, and
+# its MBA. Both are signed for MSM8994, unlike the modem partition written by the
+# installer (Lumia 950 / MSM8992 images). ueventd searches /etc/firmware first.
+PRODUCT_COPY_FILES += \
+    vendor/msft/cityman/proprietary/system/etc/firmware/mba.b00:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/mba.b00 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b00:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b00 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b01:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b01 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b03:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b03 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b04:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b04 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b05:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b05 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b06:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b06 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b07:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b07 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b08:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b08 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b09:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b09 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b10:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b10 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b11:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b11 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b12:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b12 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b13:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b13 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b14:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b14 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b18:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b18 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b19:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b19 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b20:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b20 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.b22:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.b22 \
+    vendor/msft/cityman/proprietary/system/etc/firmware/modem.mdt:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/modem.mdt
